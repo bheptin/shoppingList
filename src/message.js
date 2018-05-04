@@ -6,13 +6,21 @@ class Message extends Component {
     this.state = {
       message: '',
     }
+  };
+
+
+  handleClick(event) {
+    console.log(this.state.message);
+    event.preventDefault();
   }
+
   render() {
     return(
-      <div>
+      <form  onSubmit={this.handleClick}>
         <input onChange={event => this.setState({message: event.target.value})} />
-        value of the input: {this.state.message}
-      </div>
+        <button onClick={(e) => this.handleClick(e)}  type="submit">add</button>
+
+      </form>
     );
   };
 }

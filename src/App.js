@@ -7,9 +7,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="todoListMain">
-          <div className="header">  
+          <div className="header">
               <Message />
-              <button type="submit">add</button>
           </div>
         </div>
       </div>
