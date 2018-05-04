@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MessageItems from './messageItems.js';
 
 class Message extends Component {
   constructor(props) {
@@ -29,13 +30,17 @@ class Message extends Component {
 
   render() {
     return(
-      <form  onSubmit={this.addMessage}>
-        <input
-        ref={(a) => this._inputElement = a}
-        placeholder="Add to the list" />
-        <button type="submit">add</button>
-
-      </form>
+      <div className="shoppingListMain">
+        <div className="header">
+          <form  onSubmit={this.addMessage}>
+            <input
+            ref={(a) => this._inputElement = a}
+            placeholder="Add to the list" />
+            <button type="submit">add</button>
+          </form>
+        </div>
+          <MessageItems entries={this.state.message} />
+      </div>
     );
   };
 }
