@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class MessageItems extends Component {
   createTasks(item) {
-    return <li key={item.key}>{item.text}</li>
+    return <li style={{ listStyleType: "none", color: "white" }} key={item.key}>{item.text}</li>
   }
 
   render() {

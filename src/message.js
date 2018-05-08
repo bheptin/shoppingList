@@ -6,8 +6,10 @@ class Message extends Component {
     super(props);
     this.state = {
       message: [],
+      name: [],
     };
     this.addMessage = this.addMessage.bind(this);
+    //this.addName = this.addName.bind(this);
   }
 
 
@@ -33,7 +35,9 @@ class Message extends Component {
       <div className="shoppingListMain">
         <div className="header">
           <form  onSubmit={this.addMessage}>
-            <input
+            <input style={{marginRight: "10px"}}
+            placeholder="Who's list is this for?" />
+            <input style={{marginRight: "4px"}}
             ref={(a) => this._inputElement = a}
             placeholder="Add to the list" />
             <button type="submit">add</button>
